@@ -1,0 +1,66 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+
+.main {
+    background-color: v.$secondary;
+    height: 100rem;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &__advicer {
+        background-color: v.$primary;
+        width: 90%;
+        border-radius: 1rem;
+    }
+    &__heading {
+        color: v.$neonGreen;
+        font-size: 1.2rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+    &__quote {
+        font-size: 2.8rem;
+        margin: 0;
+        padding: 0 2rem;
+        color: v.$lightCyan;
+        font-weight: bold;
+        line-height: 1.5;
+    }
+    &__line {
+        margin: 2rem auto;
+        filter: invert(25%);
+    }
+    &__circle {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 4rem;
+        width: 8rem;
+        margin: 0 auto;
+        background-color: aquamarine;
+        border-radius: 50%;
+        height: 8rem;
+        transition: box-shadow 0.5s;
+        cursor: pointer;
+        &:hover {
+            box-shadow: 0 0 2rem v.$neonGreen; 
+        }
+    }
+    &__dice {
+        width: 40%;
+        height: 40%;
+        align-self: center;
+        cursor: pointer;
+        
+    }
+    @include m.tablet {
+        &__advicer {
+            width: 50rem;
+        }
+    }
+}
